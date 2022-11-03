@@ -1,0 +1,35 @@
+{
+    "title": "housing_prediction_app",
+    "summary": "",
+    "description": [
+		"This is housing_prediction_app application using DEEPaaS API",
+	],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "MIT",
+    "date_creation": "2022-11-03",
+    "sources": {
+		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-housing_prediction_app",
+		"docker_registry_repo": "deephdc/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}deep-oc-{{ cookiecutter.repo_name }}{% else -%}uc-{{ cookiecutter.git_base_url.split('/')[-1] }}-deep-oc-{{ cookiecutter.repo_name }}{% endif %}",
+		"code": "https://github.com/deephdc/housing_prediction_app"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}DEEP-OC-{{ cookiecutter.repo_name }}{% else -%}UC-{{ cookiecutter.git_base_url.split('/')[-1] }}-DEEP-OC-{{ cookiecutter.repo_name }}{% endif %}/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}DEEP-OC-{{ cookiecutter.repo_name }}{% else -%}UC-{{ cookiecutter.git_base_url.split('/')[-1] }}-DEEP-OC-{{ cookiecutter.repo_name }}{% endif %}/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
