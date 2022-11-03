@@ -3,7 +3,7 @@
 </div>
 
 # DEEP-OC-housing_prediction_app
-[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}DEEP-OC-{{ cookiecutter.repo_name }}{% else -%}UC-{{ cookiecutter.git_base_url.split('/')[-1] }}-DEEP-OC-{{ cookiecutter.repo_name }}{% endif %}/master)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}DEEP-OC-{{ cookiecutter.repo_name }}{% else -%}UC-{{ cookiecutter.git_base_url.split('/')[-1] }}-DEEP-OC-{{ cookiecutter.repo_name }}{% endif %}/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}DEEP-OC-{{ cookiecutter.repo_name }}{% else -%}UC-{{ cookiecutter.git_base_url.split('/')[-1] }}-DEEP-OC-{{ cookiecutter.repo_name }}{% endif %}/test)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/{% if cookiecutter.git_base_url == 'https://github.com/deephdc' %}DEEP-OC-{{ cookiecutter.repo_name }}{% else -%}UC-{{ cookiecutter.git_base_url.split('/')[-1] }}-DEEP-OC-{{ cookiecutter.repo_name }}{% endif %}/job/test)
 
 This is a container that will run the [housing_prediction_app](https://github.com/deephdc/housing_prediction_app) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
 
